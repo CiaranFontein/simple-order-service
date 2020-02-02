@@ -1,5 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
 const AppHeader = ({ classes }) => (
   <AppBar position="static">
@@ -7,6 +8,12 @@ const AppHeader = ({ classes }) => (
       <Typography variant="h6" color="inherit">
         My React App
       </Typography>
+      <Button color="inherit" component={Link} to="/">
+        Home
+      </Button>
+      <Button color="inherit" component={Link} to="/posts">
+        Posts Manager
+      </Button>
     </Toolbar>
   </AppBar>
 );
